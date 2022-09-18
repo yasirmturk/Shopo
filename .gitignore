@@ -32,6 +32,7 @@ public/css/*.css
 !public/css/grid.*.css
 !public/css/animations.*.css
 !public/css/line-awesome.css
+!public/css/fonts.*.css
 public/js/*.map
 public/js/*.txt
 public/css/*.map
