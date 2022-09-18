@@ -200,12 +200,12 @@ class ReportService
              *
              * @var NotificationService
              */
-            $message = __( 'A stock operation has recently been detected, however the NexoPOS was\'nt able to update the report accordingly. This occurs if the daily dashboard reference has\'nt been created.' );
+            $message = __( 'A stock operation has recently been detected, however the Shopoo was\'nt able to update the report accordingly. This occurs if the daily dashboard reference has\'nt been created.' );
             $notification = app()->make( NotificationService::class );
             $notification->create([
                 'title' => __( 'Untracked Stock Operation' ),
                 'description' => $message,
-                'url' => 'https://my.nexopos.com/en/troubleshooting/untracked-stock-operation',
+                'url' => 'https://apnisite.com',
             ])->dispatchForGroup( Role::namespace( 'admin' ) );
 
             return [
@@ -512,13 +512,13 @@ class ReportService
          *
          * @var NotificationService
          */
-        $message = __( 'A stock operation has recently been detected, however the NexoPOS was\'nt able to update the report accordingly. This occurs if the daily dashboard reference has\'nt been created.' );
+        $message = __( 'A stock operation has recently been detected, however the Shopoo was\'nt able to update the report accordingly. This occurs if the daily dashboard reference has\'nt been created.' );
 
         $notification = app()->make( NotificationService::class );
         $notification->create([
             'title' => __( 'Untracked Stock Operation' ),
             'description' => $message,
-            'url' => 'https://my.nexopos.com/en/troubleshooting/untracked-stock-operation',
+            'url' => 'https://apnisite.com',
         ])->dispatchForGroup( Role::namespace( 'admin' ) );
 
         return [

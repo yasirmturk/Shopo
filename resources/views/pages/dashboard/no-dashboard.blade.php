@@ -6,7 +6,7 @@
             <p class="text-center py-2">{{ __( 'All the roles assigned to the user doens\'t have any dashboard defined (or all dashboard are set to none). Consider assigning at least a dashboard to one of the role assigned to the user.' ) }}</p>
             <div class="flex flex-col md:flex-row md:-mx-2">
                 <div class="px-2">
-                    <ns-link href="https://my.nexopos.com/en/documentation/troubleshooting/no-dashboard" type="info">{{ __( 'Learn More' ) }}</ns-link>
+                    <ns-link href="https://apnisite.com" type="info">{{ __( 'Learn More' ) }}</ns-link>
                 </div>
             </div>
         </div>

@@ -78,7 +78,7 @@ if ( Auth::check() ) {
                         @if ( ns()->option->get( 'ns_store_rectangle_logo' ) )
                         <img src="{{ ns()->option->get( 'ns_store_rectangle_logo' ) }}" class="w-11/12" alt="logo"/>
                         @else
-                        <h1 class="font-black text-transparent bg-clip-text bg-gradient-to-b from-blue-200 to-indigo-400 text-3xl">NexoPOS</h1>
+                        <h1 class="font-black text-transparent bg-clip-text bg-gradient-to-b from-blue-200 to-indigo-400 text-3xl">Shopoo</h1>
                         @endif
                     </div>
                     <ul>
@@ -90,7 +90,7 @@ if ( Auth::check() ) {
                                         @if ( isset( $menu[ 'permissions' ] ) && Auth::user()->allowedTo( $menu[ 'permissions' ], 'some' ) || ! isset( $menu[ 'permissions' ] ) )
                                     <ns-submenu :active="{{ ( isset( $menu[ 'active' ] ) ? ( $menu[ 'active' ] ? 'true' : 'false' ) : 'false' ) }}" href="{{ $menu[ 'href' ] }}" id="submenu-{{ $identifier }}">{{ $menu[ 'label' ] }}</ns-submenu>
                                         @endif
-                                    @endforeach        
+                                    @endforeach
                                 @endif
                             </ns-menu>
                             @endif
@@ -104,7 +104,7 @@ if ( Auth::check() ) {
                     @hasSection( 'layout.dashboard.body' )
                         @yield( 'layout.dashboard.body' )
                     @endif
-                    
+
                     @hasSection( 'layout.dashboard.body.with-header' )
                         @include( 'common.dashboard.with-header' )
                     @endif
@@ -112,7 +112,7 @@ if ( Auth::check() ) {
                     @hasSection( 'layout.dashboard.with-header' )
                         @include( 'common.dashboard.with-header' )
                     @endif
-                    
+
                     @hasSection( 'layout.dashboard.body.with-title' )
                         @include( 'common.dashboard.with-title' )
                     @endif
@@ -122,8 +122,8 @@ if ( Auth::check() ) {
                     @endif
                 </div>
                 <div class="p-2 text-xs flex justify-end text-gray-500">
-                    {!! 
-                        Hook::filter( 'ns-footer-signature', sprintf( __( 'You\'re using <a tager="_blank" href="%s" class="hover:text-blue-400 mx-1 inline-block">NexoPOS %s</a>' ), 'https://my.nexopos.com/en', config( 'nexopos.version' ) ) )
+                    {!!
+                        Hook::filter( 'ns-footer-signature', sprintf( __( 'You\'re using <a tager="_blank" href="%s" class="hover:text-blue-400 mx-1 inline-block">Shopoo %s</a>' ), 'https://apnisite.com', config( 'nexopos.version' ) ) )
                     !!}
                 </div>
             </div>

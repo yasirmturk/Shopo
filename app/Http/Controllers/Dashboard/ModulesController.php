@@ -136,7 +136,7 @@ class ModulesController extends DashboardController
     {
         return $this->view( 'pages.dashboard.modules.upload', [
             'title' => __( 'Upload A Module' ),
-            'description' => __( 'Extends NexoPOS features with some new modules.' ),
+            'description' => __( 'Extends Shopoo features with some new modules.' ),
         ]);
     }
 
