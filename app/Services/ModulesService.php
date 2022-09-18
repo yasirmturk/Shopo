@@ -411,7 +411,7 @@ class ModulesService
 
                 throw new ModuleVersionMismatchException( __(
                     sprintf(
-                        __( 'The module "%s" has been disabled as it\'s not compatible with the current version of NexoPOS %s, but requires %s. ' ),
+                        __( 'The module "%s" has been disabled as it\'s not compatible with the current version %s, but requires %s. ' ),
                         $module[ 'name' ],
                         config( 'nexopos.version' ),
                         $module[ 'core' ][ 'min-version' ]
