@@ -1,0 +1,10 @@
+name: shopo
+recipe: laravel
+config:
+  php: '8.1'
+  via: nginx
+  webroot: public
+  xdebug: true
+proxy:
+  appserver_nginx:
+    - shopo.lndo.site
