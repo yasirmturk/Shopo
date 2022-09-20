@@ -243,9 +243,7 @@ class AppServiceProvider extends ServiceProvider
             file_put_contents( database_path( 'database.sqlite' ), '' );
         }
 
-        if ( Helper::installed() ) {
-            Schema::defaultStringLength(191);
-        }
+        Schema::defaultStringLength(191);
     }
 
     /**
