@@ -662,15 +662,15 @@ export default {
             }
         },
         remove( product ) {
+            this.options.ns_pos_confirm_actions ?
             Popup.show( PosConfirmPopup, {
                 title: __( 'Confirm Your Action' ),
                 message: __( 'Would you like to delete this product ?' ),
                 onAction( action ) {
                     if ( action ) {
-                        POS.removeProduct( product );
                     }
                 }
-            });
+            }) : POS.removeProduct( product );
         },
 
         allowQuantityModification( product ) {
