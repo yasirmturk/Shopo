@@ -72,9 +72,7 @@
                     <div :product-index="index" :key="product.barcode" class="product-item flex" v-for="(product, index) of products">
                         <div class="w-full lg:w-4/6 p-2 border border-l-0 border-t-0">
                             <div class="flex justify-between product-details mb-1">
-                                <h3 class="font-semibold">
-                                    {{ product.name }} &mdash; {{ product.unit_name }}
-                                </h3>
+                                <h3 class="font-semibold">{{ product.name }}</h3>
                                 <div class="-mx-1 flex product-options">
                                     <div class="px-1">
                                         <a @click="remove( product )" class="hover:text-error-secondary cursor-pointer outline-none border-dashed py-1 border-b border-error-secondary text-sm">
@@ -91,7 +89,7 @@
                             <div class="flex justify-between product-controls">
                                 <div class="-mx-1 flex flex-wrap">
                                     <div class="px-1 w-1/2 md:w-auto mb-1">
-                                        <a
+                                        {{ product.unit_name }} &mdash; <a
                                             @click="changeProductPrice( product )"
                                             :class="product.mode === 'wholesale' ? 'text-success-secondary hover:text-success-secondary border-success-secondary' : 'border-info-primary'"
                                             class="cursor-pointer outline-none border-dashed py-1 border-b  text-sm"
