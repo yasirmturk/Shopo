@@ -122,7 +122,7 @@
                             <td width="200" class="border p-2">
                                 <a @click="selectCustomer()" class="cursor-pointer outline-none border-dashed py-1 border-b border-info-primary text-sm">{{ __( 'Customer' ) }}: {{ customerName }}</a>
                             </td>
-                            <td width="200" class="border p-2">{{ __( 'Sub Total' ) }}</td>
+                            <td width="200" class="border p-2">{{ __( 'Sub Total' ) }} for {{ totalQuantity }} items</td>
                             <td width="200" class="border p-2 text-right">{{ order.subtotal | currency }}</td>
                         </tr>
                         <tr v-if="order.coupons.length > 0">
@@ -307,6 +307,9 @@ export default {
         },
         couponName() {
             return __( 'Apply Coupon' );
+        },
+        totalQuantity() {
+            return this.order.products.reduce( (q, p) => { return q + p.quantity; }, 0);
         }
     },
     mounted() {
