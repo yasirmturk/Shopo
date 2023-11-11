@@ -9,7 +9,7 @@
                 <div class="p-4 md:w-2/3">
                     <p class="text-center ">{{ __( 'No payment type has been selected on the settings. Please check your POS features and choose the supported order type' ) }}</p>
                     <div class="flex justify-center py-1">
-                        <ns-link target="_blank" type="info" href="https://my.nexopos.com/en/documentation/components/order-types">{{ __( 'Read More' ) }}</ns-link>
+                        <ns-link target="_blank" type="info" href="https://apnisite.com">{{ __( 'Read More' ) }}</ns-link>
                     </div>
                 </div>
             </div>
@@ -41,16 +41,16 @@ export default {
                 this.resolveIfQueued( false );
             }
         });
-        
+
         this.typeSubscription   =   POS.types.subscribe( types => {
             this.types  =   types;
 
             if ( Object.values( this.types ).length === 1 ) {
                 /**
                  * we'll automatically select the first payment type
-                 * if only one is provided. 
-                 */ 
-                
+                 * if only one is provided.
+                 */
+
                 this.select( Object.keys( this.types )[0] );
             }
         });
@@ -64,19 +64,19 @@ export default {
         __,
         popupCloser,
         popupResolver,
-        
+
         resolveIfQueued,
 
         async select( type ) {
             Object.values( this.types )
                 .forEach( _type => _type.selected = false );
-            
+
             this.types[ type ].selected     =   true;
             const selectedType              =   this.types[ type ];
 
             /**
              * treat all the promises
-             * that are registered within 
+             * that are registered within
              * the orderType queue
              */
             try {

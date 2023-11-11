@@ -80,7 +80,7 @@ class CheckApplicationHealthMiddleware
             'identifier' => NotificationsEnum::NSCRONDISABLED,
             'source' => 'system',
             'url' => 'https://laravel.com/docs/8.x/scheduling#starting-the-scheduler',
-            'description' => __( "NexoPOS is unable to run tasks correctly. This happens if Queues or Tasks Scheduling aren't configured correctly." ),
+            'description' => __( "System is unable to run tasks correctly. This happens if Queues or Tasks Scheduling aren't configured correctly." ),
         ])->dispatchForGroup( Role::namespace( 'admin' ) );
     }
 }

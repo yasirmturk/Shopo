@@ -21,7 +21,7 @@ export default class FormValidation {
         }
 
         const globalErrors          =   [];
-        
+
         for( let key in form.tabs ) {
             /**
              * Only tabs having fields can be verified.
@@ -29,13 +29,13 @@ export default class FormValidation {
             if ( form.tabs[ key ].fields ) {
                 const tabsInvalidity    =   [];
                 const validErrors       =   this.validateFieldsErrors( form.tabs[ key ].fields );
-                
+
                 if ( validErrors.length > 0 ) {
                     tabsInvalidity.push(
                         validErrors
                     );
                 }
-    
+
                 form.tabs[ key ].errors     =   tabsInvalidity.flat();
                 globalErrors.push( tabsInvalidity.flat() );
             }
@@ -92,10 +92,10 @@ export default class FormValidation {
                     field.component.$field      =   field;
                     field.component.$fields     =   fields;
                 } else {
-                    throw `Failed to load a custom component. "${componentName}" is not provided as an extra component. More details here: https://my.nexopos.com/en/documentation/developpers-guides/how-to-register-a-custom-vue-component`;
+                    throw `Failed to load a custom component. "${componentName}" is not provided as an extra component. More details here: https://apnisite.com`;
                 }
             }
-            
+
             return field;
         });
     }
@@ -108,9 +108,9 @@ export default class FormValidation {
         if ( form.tabs ) {
             for( let tab in form.tabs ) {
                 form.tabs[ tab ].errors     =   [];
-                
+
                 /**
-                 * a tab might not have fields. In such case we should 
+                 * a tab might not have fields. In such case we should
                  * skip creating fields and try building component.
                  */
                 if ( form.tabs[ tab ].fields !== undefined ) {
@@ -184,7 +184,7 @@ export default class FormValidation {
                 if ( formValue[ tab ] === undefined ) {
                     formValue[ tab ]    =   {};
                 }
-    
+
                 formValue[ tab ]   =   this.extractFields( form.tabs[ tab ].fields );
             }
         }
@@ -223,7 +223,7 @@ export default class FormValidation {
                     value: result[2]
                 }
             }
-            
+
             return rule;
         };
 
@@ -238,8 +238,8 @@ export default class FormValidation {
     /**
      * Will trigger an error on the form
      * if the error is a validation object.
-     * @param {Object} Form 
-     * @param {Object} data 
+     * @param {Object} Form
+     * @param {Object} data
      */
     triggerError( form, data ) {
         console.log( data );
@@ -251,7 +251,7 @@ export default class FormValidation {
 
                 /**
                  * if the validation path
-                 * has 2 entries we believe it's a 
+                 * has 2 entries we believe it's a
                  * an error on a field within a tab
                  */
                 if ( path.length === 2 ) {
@@ -293,7 +293,7 @@ export default class FormValidation {
             for( let fieldName in data.errors ) {
                 /**
                  * if the validation path
-                 * has 2 entries we believe it's a 
+                 * has 2 entries we believe it's a
                  * an error on a field within a tab
                  */
                 fields.forEach( field => {

@@ -113,6 +113,16 @@ return [
                 'no' => __( 'No' ),
             ]),
             'description' => __( 'Will permanently enable barcode autofocus to ease using a barcode reader.' ),
+        ], [
+            'name' => 'ns_pos_confirm_actions',
+            'value' => ns()->option->get( 'ns_pos_confirm_actions' ),
+            'label' => __( 'Confirm Actions' ),
+            'type' => 'switch',
+            'options' => Helper::kvToJsOptions([
+                'yes' => __( 'Yes' ),
+                'no' => __( 'No' ),
+            ]),
+            'description' => __( 'Will confirm sensitive actions before applying.' ),
         ],
     ],
 ];

@@ -21,19 +21,19 @@ class FirstExampleProviderSeeder extends Seeder
 
         $provider = new Provider;
         $provider->name = 'John Provider';
-        $provider->email = 'john@nexopos.com';
+        $provider->email = 'john@apnisite.com';
         $provider->author = $author;
         $provider->save();
 
         $provider = new Provider;
         $provider->name = 'Mario Provider';
-        $provider->email = 'mario@nexopos.com';
+        $provider->email = 'mario@apnisite.com';
         $provider->author = $author;
         $provider->save();
 
         $provider = new Provider;
         $provider->name = 'Nate Provider';
-        $provider->email = 'nate@nexopos.com';
+        $provider->email = 'nate@apnisite.com';
         $provider->author = $author;
         $provider->save();
     }

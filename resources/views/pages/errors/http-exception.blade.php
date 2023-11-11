@@ -23,7 +23,7 @@
                 </div>
                 <div class="px-4 mb-4">
                     <div class="ns-button hover-info">
-                        <a class="shadow px-2 py-1 rounded block w-full lg:w-auto" href="https://my.nexopos.com/en/documentation"><i class="las la-cog"></i> {{ __( 'Documentation' ) }}</a>
+                        <a class="shadow px-2 py-1 rounded block w-full lg:w-auto" href="https://apnisite.com"><i class="las la-cog"></i> {{ __( 'Documentation' ) }}</a>
                     </div>
                 </div>
             </div>

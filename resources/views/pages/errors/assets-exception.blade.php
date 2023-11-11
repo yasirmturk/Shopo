@@ -9,7 +9,7 @@
             <h1 class="text-white text-3xl mb-2 lg:text-5xl font-bold text-center">{!! $title ?? __( 'Not Allowed Action' ) !!}</h1>
             <div class="my-2 shadow overflow-hidden rounded bg-white w-95vw md:w-3/4 lg:w-3/5">
                 <p class="md:w-auto w-95vw bg-gray-700 text-gray-100 lg:text-lg text-center p-4">{{ $message }}</p>
-                @if ( ns()->isProduction() ) 
+                @if ( ns()->isProduction() )
                 <div class="p-4 text-gray-600 text-center text-sm">
                     {{ __( 'Your system is running in production mode. You probably need to build the assets' ) }}
                 </div>
@@ -20,7 +20,7 @@
                 @endif
                 <ul class="flex flex-col">
                     <li class="flex">
-                        <a target="_blank" href="https://my.nexopos.com/en/documentation/how-tos/how-to-change-database-configuration" class="border-t w-full border-gray-300 text-gray-600 text-sm p-2">
+                        <a target="_blank" href="https://apnisite.com" class="border-t w-full border-gray-300 text-gray-600 text-sm p-2">
                             <i class="las la-hand-point-right"></i>
                             <span class="ml-2">{{ __( 'How to change database configuration' ) }}</span>
                         </a>

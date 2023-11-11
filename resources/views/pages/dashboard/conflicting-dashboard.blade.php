@@ -6,7 +6,7 @@
             <p class="text-center py-2">{{ __( 'The current logged user has more that 2 roles that has dashboard defined. In case multiple roles are assigned to a user, only one of these roles should have a dashboard defined.' ) }}</p>
             <div class="flex flex-col md:flex-row md:-mx-2">
                 <div class="px-2">
-                    <ns-link href="https://my.nexopos.com/en/documentation/troubleshooting/conflicting-dashboard" target="_blank" type="info">{{ __( 'Learn More' ) }}</ns-link>
+                    <ns-link href="https://apnisite.com" target="_blank" type="info">{{ __( 'Learn More' ) }}</ns-link>
                 </div>
             </div>
         </div>
